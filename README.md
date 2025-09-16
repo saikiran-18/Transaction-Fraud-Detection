@@ -69,11 +69,6 @@ The core of the methodology is a robust clustering workflow designed for efficie
 4. Launch the Streamlit dashboard:  
    streamlit run dashboard.py
 
-Here is the sample images of streamlit outputs:
-<h3>🔹 Dashboard Input</h3>
-![Transaction Fraud Detection Input]("D:\saikiran's folder\files\Picture\Pictures\Screenshots\Screenshot (28).png")
 
-<h3>🔹 Dashboard Output</h3>
-![Transaction Fraud Detection Output]("D:\saikiran's folder\files\Picture\Pictures\Screenshots\Screenshot (29).png")
 
 
