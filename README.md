@@ -70,4 +70,10 @@ The core of the methodology is a robust clustering workflow designed for efficie
    streamlit run dashboard.py
 
 Here is the sample images of streamlit outputs:
+<h3>🔹 Dashboard Input</h3>
+<img src="images/dashboard_input.png" alt="Transaction Input Dashboard" width="600"/>
+
+<h3>🔹 Dashboard Output</h3>
+<img src="images/dashboard_output.png" alt="Transaction Output Dashboard" width="600"/>
+
 
