@@ -67,4 +67,7 @@ The core of the methodology is a robust clustering workflow designed for efficie
 
 3. Run the Jupyter Notebook to train the model and save the necessary files (scaler.pkl, pca.pkl, fraud\_model.pkl, fraud\_cluster.pkl).  
 4. Launch the Streamlit dashboard:  
-   streamlit run dashboard.py  
+   streamlit run dashboard.py
+
+Here is the sample images of streamlit outputs:
+
