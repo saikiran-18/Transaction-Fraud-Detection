@@ -71,9 +71,9 @@ The core of the methodology is a robust clustering workflow designed for efficie
 
 Here is the sample images of streamlit outputs:
 <h3>🔹 Dashboard Input</h3>
-<img src="images/dashboard_input.png" alt="Transaction Input Dashboard" width="600"/>
+![Transaction Fraud Detection Input]("D:\saikiran's folder\files\Picture\Pictures\Screenshots\Screenshot (28).png")
 
 <h3>🔹 Dashboard Output</h3>
-<img src="images/dashboard_output.png" alt="Transaction Output Dashboard" width="600"/>
+![Transaction Fraud Detection Output]("D:\saikiran's folder\files\Picture\Pictures\Screenshots\Screenshot (29).png")
 
 
