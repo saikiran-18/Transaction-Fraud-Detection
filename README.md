@@ -71,21 +71,42 @@ The core of the methodology is a robust clustering workflow designed for efficie
 
  # **Transaction Fraud Detection- supervised learning**
 
-* **Project Title:** Start with a clear and distinct title for the project, such as "**Transaction Fraud Detection: Supervised Learning Approach**".
-* **Core Subject:** Specify that this project falls under **Supervised Machine Learning**.
-* **Problem Statement:** Briefly explain the goal of this project, which is to build a classification model to **predict fraudulent transactions** using a labeled dataset.
-* **Dataset:** Mention the dataset used (e.g., Synthetic Fraud Dataset) and clarify that unlike the unsupervised project, this notebook uses the `Fraud_Label` column as the target variable for training.
-* **Methodology:**
+
+
+### 📊 Supervised Learning Approach: Risk Score Calculation and User Help
+
+This project builds a **Random Forest Classifier** to predict fraudulent transactions based on a labeled dataset.
+
+| Feature | Importance Score |
+| :--- | :--- |
+| `Transaction_Distance` | 0.2948 |
+| `Account_Balance` | 0.2941 |
+| `Transaction_Amount` | 0.2928 |
+| `Daily_Transaction_Count` | 0.1182 |
+| **Total** | 1.0000 |
+
+***
+ #### **Methodology:**
     * **Feature Selection:** List the specific features you used for training (`Transaction_Amount`, `Daily_Transaction_Count`, `Account_Balance`, `Transaction_Distance`) and mention that these were selected because they are "user-knowable".
     * **Data Preprocessing:** Describe the steps taken, such as using `StandardScaler` to normalize the feature data.
     * **Model:** State that you chose a **Random Forest Classifier** and explain why it was suitable for this task (e.g., it handles class imbalance using `class_weight="balanced"`).
-* **Results and Evaluation:**
-    * **Performance Metrics:** Share the key evaluation metrics from your model's performance on the test set. Specifically, mention the **Accuracy**, **Precision**, **Recall**, and **F1-score**.
-    * **Low Recall:** Highlight the low recall score (0.0624) as a critical finding. This demonstrates the model's limitation in correctly identifying all fraudulent transactions, which is an important insight to share.
-    * **Feature Importance:** Explain which features the model found most significant in its predictions (e.g., `Transaction_Distance`, `Account_Balance`, `Transaction_Amount`).
-* **Dashboard:** Describe the Streamlit dashboard (`app.py`) that you created. Explain that it uses the trained model to predict whether a new transaction is fraudulent and provides a "Calculated Risk_Score".
-* **Conclusion:** Briefly summarize the project's outcome and the limitations of this specific supervised model, particularly its struggle with identifying all fraud cases, as indicated by the low recall. This shows that you've critically analyzed the model's performance.
 
+#### 📈 Calculating the Risk Score
+A custom **weighted fraud indicator** is used to provide a single, interpretable score for each transaction. This indicator is a weighted average of several normalized features.
+
+The calculation is as follows:
+* `weighted_indicator = (0.4 * risk_score) + (0.3 * normalized_amount) + (0.2 * normalized_distance) + (0.1 * normalized_balance)`
+
+This score ranges from 0 to 1, where a score greater than 0.5 indicates a high fraud risk.
+
+#### 🚀 End-User Help and Dashboard
+The Streamlit dashboard (`dashboard.py`) is designed to be user-friendly, allowing an end-user to input transaction details and receive an immediate fraud prediction.
+
+* **Prediction Result:** The app provides a direct classification of **"🚨 Fraud"** or **"✅ Not Fraud"** based on the model's prediction.
+* **Weighted Indicator:** A numeric score is displayed to give more detail beyond the simple "yes/no" prediction.
+* **Interpreting Results:** This approach helps end-users, such as bank analysts or e-commerce security teams, to quickly assess the risk level of a transaction. A high score or a "Fraud" label can trigger an investigation or an automated action like blocking the transaction.
+
+By combining direct predictions with an interpretable risk score, this supervised learning model serves as a practical and useful tool for fraud detection.
 
 
 
