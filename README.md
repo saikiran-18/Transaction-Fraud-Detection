@@ -1,5 +1,5 @@
 
-# **Transaction Fraud Detection**
+# **Transaction Fraud Detection-Unsupervised learning**
 
 This project demonstrates an **unsupervised machine learning** approach to detect potentially fraudulent transactions using clustering and anomaly detection techniques. The model is trained on a synthetic dataset to identify unusual transaction patterns without relying on pre-labeled fraud data. This approach is highly effective for discovering new, unseen types of fraudulent activity.
 
@@ -68,6 +68,23 @@ The core of the methodology is a robust clustering workflow designed for efficie
 3. Run the Jupyter Notebook to train the model and save the necessary files (scaler.pkl, pca.pkl, fraud\_model.pkl, fraud\_cluster.pkl).  
 4. Launch the Streamlit dashboard:  
    streamlit run dashboard.py
+
+ # **Transaction Fraud Detection- supervised learning**
+
+* **Project Title:** Start with a clear and distinct title for the project, such as "**Transaction Fraud Detection: Supervised Learning Approach**".
+* **Core Subject:** Specify that this project falls under **Supervised Machine Learning**.
+* **Problem Statement:** Briefly explain the goal of this project, which is to build a classification model to **predict fraudulent transactions** using a labeled dataset.
+* **Dataset:** Mention the dataset used (e.g., Synthetic Fraud Dataset) and clarify that unlike the unsupervised project, this notebook uses the `Fraud_Label` column as the target variable for training.
+* **Methodology:**
+    * **Feature Selection:** List the specific features you used for training (`Transaction_Amount`, `Daily_Transaction_Count`, `Account_Balance`, `Transaction_Distance`) and mention that these were selected because they are "user-knowable".
+    * **Data Preprocessing:** Describe the steps taken, such as using `StandardScaler` to normalize the feature data.
+    * **Model:** State that you chose a **Random Forest Classifier** and explain why it was suitable for this task (e.g., it handles class imbalance using `class_weight="balanced"`).
+* **Results and Evaluation:**
+    * **Performance Metrics:** Share the key evaluation metrics from your model's performance on the test set. Specifically, mention the **Accuracy**, **Precision**, **Recall**, and **F1-score**.
+    * **Low Recall:** Highlight the low recall score (0.0624) as a critical finding. This demonstrates the model's limitation in correctly identifying all fraudulent transactions, which is an important insight to share.
+    * **Feature Importance:** Explain which features the model found most significant in its predictions (e.g., `Transaction_Distance`, `Account_Balance`, `Transaction_Amount`).
+* **Dashboard:** Describe the Streamlit dashboard (`app.py`) that you created. Explain that it uses the trained model to predict whether a new transaction is fraudulent and provides a "Calculated Risk_Score".
+* **Conclusion:** Briefly summarize the project's outcome and the limitations of this specific supervised model, particularly its struggle with identifying all fraud cases, as indicated by the low recall. This shows that you've critically analyzed the model's performance.
 
 
 
